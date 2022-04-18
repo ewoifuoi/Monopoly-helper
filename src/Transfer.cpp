@@ -8,7 +8,7 @@ void Transfer(int line) {
 
     INIT_NORMAL // 初始化 窗口  ( 不可省略 )
     SCENE_INSIDE(// 初始化场景 
-        int bottom = line * 2 + 6 + 1;
+        int bottom = line * 2 + 6 + 2;
         for(int i = 0; i < member.size(); i++) {
             if(i == line) continue;
 
@@ -23,7 +23,7 @@ void Transfer(int line) {
                 Back(1);
             });
             temp.push_back(new_btn);
-            bottom++;
+            bottom+=2;
         }
         
         auto b = new Button("取消", 44, bottom, gray, yellow_l + blue * 16, [&](){
