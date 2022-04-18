@@ -16,7 +16,7 @@ void Welcome() {
             auto new_member = new Label(member[i].getName(), 27, bottom, member[i].color);
             bottom += 2;
         }
-        auto btn1 = new Button("添加成员", 26, bottom, [&](){
+        auto btn1 = new Button("[添加成员]", 26, bottom, [&](){
             // 请在这里编写按钮触发事件 (Enter 触发)
             if(member.size() == 6) {
                 Error("已到达人数上限 !");
@@ -31,11 +31,14 @@ void Welcome() {
             
 
         });
-        auto start = new Button("开始游戏", 48, 17, [&](){
+        auto del = new Button("[编辑]", 50, 17, white, yellow_l + blue * 16, [&](){
+
+        });
+        auto start = new Button("[开始游戏]", 48, 15, [&](){
             Game();
         });
-        start->setColor(green_l, yellow_l + blue * 16);
-        auto btn3 = new Button("退出", 50, 19, [](){
+        start->setColor(aqua, yellow_l + blue * 16);
+        auto btn3 = new Button("[退出]", 50, 19, [](){
             exit(0);// 结束进程
         });
         btn3->setColor(gray, yellow_l + blue * 16);
@@ -45,7 +48,7 @@ void Welcome() {
             // 按钮 监听 (如有按钮组件 则不可省略)
             
             // 调用组件方法
-            LISTEN_BUTTON(btn1, btn3, start)
+            LISTEN_BUTTON(btn1, start, del , btn3)
             
             
             

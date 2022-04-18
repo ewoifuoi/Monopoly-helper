@@ -30,6 +30,18 @@ while(1) {\
     }\
 }\
 
+#define SCENE_INSIDE(TEXT) \
+while(1) {\
+    temp.clear();\
+	pointer = 0;\
+    make_boundary(1, 1, 59,22,LINE);\
+    TEXT\
+    if(back) {\
+        back--;\
+        break;\
+    }\
+}\
+
 void Error(string text);
 
 

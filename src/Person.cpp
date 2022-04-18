@@ -12,6 +12,7 @@ Person::Person(string s) {
     vis[7] = 1;
     vis[15] = 1;
     name = s;
+    money = 15;
     int t = rand() % 15 + 1;
     while(vis[t]) {
         t++;
@@ -33,11 +34,11 @@ void Person::setMoney(double num) {
 double Person::getMoney(){
     return money;
 }
-int Person::add(int num) {
+int Person::add(double num) {
     money += num;
     return 0;
 }
-int Person::dec(int num) {
+int Person::dec(double num) {
     if(money > num) {
         money -= num;
         return 0;
@@ -46,7 +47,7 @@ int Person::dec(int num) {
         return -1;
     }
 }
-int Person::giveTo(Person &other, int num) {
+int Person::giveTo(Person &other, double num) {
     if(money > num) {
         money -= num;
         other.add(num);

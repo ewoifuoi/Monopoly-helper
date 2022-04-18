@@ -19,9 +19,9 @@ public:
     string getName();
     void setMoney(double num);
     double getMoney();
-    int add(int num);
-    int dec(int num);
-    int giveTo(Person& other, int num);
+    int add(double num);
+    int dec(double num);
+    int giveTo(Person& other, double num);
     int reset();
 };
 
@@ -30,7 +30,9 @@ extern int vis[16];
 
 void Welcome();
 void Game();
+void OP(int line);
 string get_user_name();
+void Transfer(int line);
 
 
 
