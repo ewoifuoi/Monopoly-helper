@@ -7,6 +7,7 @@ using namespace std;
 
 string char_list[20001] = {"□","■", "┏", "┓", "┗", "┛", "┃", "━"};
 int back = 0;
+int r = 0;
 
 
 
@@ -51,5 +52,14 @@ void Back(int t) {
         thread_shutDown = 1;
     }
     if(back < 0) back = 0;
+    return;
+}
+
+void Reload(int t) {
+    if(r == 0) {
+        r = t;
+
+    }
+    if(r < 0) r = 0;
     return;
 }

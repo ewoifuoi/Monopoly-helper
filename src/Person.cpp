@@ -48,7 +48,7 @@ int Person::dec(double num) {
     }
 }
 int Person::giveTo(Person &other, double num) {
-    if(money > num) {
+    if(money >= num) {
         money -= num;
         other.add(num);
         return 0;

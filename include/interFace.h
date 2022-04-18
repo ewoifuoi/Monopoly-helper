@@ -33,6 +33,7 @@ void Game();
 void OP(int line);
 string get_user_name();
 void Transfer(int line);
+int del();
 
 
 

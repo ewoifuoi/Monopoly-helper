@@ -10,7 +10,7 @@ void Welcome() {
 
     INIT_NORMAL // 初始化 窗口  ( 不可省略 )
     SCENE_WITHOUT_BACK(// 初始化场景 
-        auto title = new Label("大富翁银行系统", 23, 4);
+        auto title = new Label("地产大亨银行系统", 22, 4);
         int bottom = 7;
         for(int i = 0; i < member.size(); i++) {
             auto new_member = new Label(member[i].getName(), 27, bottom, member[i].color);
@@ -31,8 +31,8 @@ void Welcome() {
             
 
         });
-        auto del = new Button("[编辑]", 50, 17, white, yellow_l + blue * 16, [&](){
-
+        auto d = new Button("[编辑]", 50, 17, white, yellow_l + blue * 16, [&](){
+            del();
         });
         auto start = new Button("[开始游戏]", 48, 15, [&](){
             Game();
@@ -48,7 +48,7 @@ void Welcome() {
             // 按钮 监听 (如有按钮组件 则不可省略)
             
             // 调用组件方法
-            LISTEN_BUTTON(btn1, start, del , btn3)
+            LISTEN_BUTTON(btn1, start, d , btn3)
             
             
             

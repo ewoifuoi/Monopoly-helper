@@ -25,6 +25,7 @@ void OP(int line) {
         });
         auto transfer = new Button("转账", 44, line * 2 + 6, yellow, yellow_l + blue * 16, [&](){
             Transfer(line);
+        
             Back(1);
         });
         auto b = new Button("取消", 50, line * 2 + 6, yellow, yellow_l + blue * 16, [&](){

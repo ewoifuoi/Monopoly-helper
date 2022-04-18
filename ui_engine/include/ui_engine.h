@@ -34,6 +34,8 @@ extern char in_put;          // 当前输入字符
 
 extern int Key[200];                // 全键盘监听, 访问 Key 判断按键是否被按下
 
+extern int r;
+
 
 // 基础 API
 // 测试函数
@@ -63,6 +65,8 @@ void set_console_color(unsigned short color_index);
 void Back(int t);
 // 全键盘监听的方式 实现 非阻塞 读入
 string Read();
+
+void Reload(int t);
 
 
 #endif
