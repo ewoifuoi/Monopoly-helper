@@ -20,7 +20,11 @@ void OP(int line) {
             stringstream temp = message("减少金额 : ");
             double val = 0;
             temp >> val;
-            if(val != -1)member[line].dec(val);
+            if(val != -1)
+            if(member[line].dec(val) == -1) {
+                Error("余额不足 !");
+            }
+            
             Back(1);
         });
         auto transfer = new Button("转账", 44, line * 2 + 6, yellow, yellow_l + blue * 16, [&](){

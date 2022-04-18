@@ -16,7 +16,10 @@ void Transfer(int line) {
                 stringstream ss = message("转账金额 : ");
                 double val = 0;
                 ss >> val;
-                member[line].giveTo(member[pointer], val);
+                if(member[line].giveTo(member[pointer], val) == -1) {
+                    Error("余额不足, 转账失败 !");
+                }
+                
                 Back(1);
             });
             temp.push_back(new_btn);

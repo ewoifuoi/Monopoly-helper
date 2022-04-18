@@ -3,6 +3,7 @@
 #ifndef SCENE
 #include<ui_engine.h>
 #define SCENE(TEXT) \
+powerprint("Powered by cmd-UI-Engine", 90, 50, gray, -1);\
 while(1) {\
     temp.clear();\
     system("CLS");\
@@ -21,6 +22,7 @@ while(1) {\
 while(1) {\
     temp.clear();\
     system("CLS");\
+    powerprint("Powered by cmd-UI-Engine", 18, 23, gray, -1);\
 	pointer = 0;\
     make_boundary(1, 1, 59,22,LINE);\
     TEXT\
