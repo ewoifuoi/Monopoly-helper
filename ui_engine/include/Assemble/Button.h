@@ -27,6 +27,7 @@ public:
     void release();                                         // 取消选中 (被选中的前一个)
     void show();                                            // 将按钮文本与颜色输出
     function<void()> Func = NULL;                                   // 按钮 被触发后执行的函数
+    void setPos(int x, int y);
 
 };
 

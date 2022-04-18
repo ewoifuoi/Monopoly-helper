@@ -12,7 +12,7 @@ using namespace std;
 int main() {
 
 
-    // Welcome(); // 示例 : 第一个界面 (欢迎界面) 
+    Welcome(); // 示例 : 第一个界面 (欢迎界面) 
     // 在 src 文件夹中 编写新界面的源文件
     // 在 include 文件夹中 编写新界面的头文件
     

@@ -19,6 +19,7 @@ Button::Button(int x, int y) {
 
 }
 
+
 Button::Button(string Tex, int x, int y, int c, int oc) {
     text = Tex;
     loc.first = x; loc.second = y;
@@ -57,6 +58,11 @@ Button::Button(string Tex, int x, int y, int xxl) {
     this->show();
 }
 
+void Button::setColor(int front, int back) {
+    color = front;
+    return ;
+}
+
 void Button::show() {
     if(if_on) {
         powerprint(text, loc.first, loc.second, on_color, -1);
@@ -79,4 +85,8 @@ void Button::release() {
 
 int Button::onClick() {
     return if_on;
+}
+
+void Button::setPos(int x, int y) {
+    loc = make_pair(x, y);
 }
